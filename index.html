@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Startowa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #e5e5e5;
+        }
+
+        td:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        td:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #video-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .video {
+            margin: 10px;
+            flex-basis: calc(50% - 20px);
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+        }
+
+
+        #image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #image-container img {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Strony" width="200" height="auto">
+        <h1>Anatolii Karpevych</h1>
+    </header>
+    <section>
+        <h2>Witam na Stronie Startowej</h2>
+        <p>Lubimy Sora Jakuba.</p>
+        
+        <h2>Moje ulubione filmy</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Gatunek</th>
+                    <th>Tytuł filmu</th>
+                    <th>Rok produkcji</th>
+                    <th>Ocena (w skali od 1 do 10)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Dramat, Komedia</td>
+                    <td>Forrest Gump</td>
+                    <td>1994</td>
+                    <td>9</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="video-container">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JZBKm2BVUL4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-LLf9RNcByk" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <div id="image-container">
+        <img src="facebook.png" alt="Obrazek" width="560" height="315">
+    </div>
+  
+  <h2>Ulubiona piosenka</h2>
+<audio controls autoplay>
+    <source src="Veegas - Plastikowa Biedronka.mp3" type="audio/mp3">
+</audio>
+    <footer>
+        <p>© 2023 Anatolii Karpevych</p>
+        <p>Data: <span id="currentDate"></span></p>
+    </footer> 
+ <script>
+        const currentDateElement = document.getElementById("currentDate");
+        const currentDate = new Date();
+        currentDateElement.textContent = currentDate.toLocaleDateString();
+    </script>
+</body>
+</html>
